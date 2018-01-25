@@ -1,2 +1,3 @@
-# ppadron5.github.io
-GitHub Pages repo
+# ppadron5 GitHub Pages example
+
+ITSE1311 - Spring 2018 CTTC
