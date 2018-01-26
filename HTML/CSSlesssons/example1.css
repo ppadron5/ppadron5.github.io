@@ -1,0 +1,22 @@
+p {
+  font-weight: bold;
+  color: gray;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+  text-align: center;
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+
+a {
+  color: red;
+}
+
+ a:hover {
+   font-size: 1.1em;
+ }
+
+ p a {
+   color: yellow;
+ }

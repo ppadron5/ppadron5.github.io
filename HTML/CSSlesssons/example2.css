@@ -1,0 +1,22 @@
+.small {
+  width: 150px;
+}
+
+.thickborder {
+  border-style: solid;
+  border-width: 5px;
+  border-color: green;
+  border-radius: 25px;
+}
+
+.thickerborder {
+  border: solid 10px red;
+  border-radius: 25px;
+}
+
+p {
+  width: 80%
+  margin: 20px, auto;
+  padding: 25px 15px;
+  min-width: 300px;
+}
