@@ -1,0 +1,11 @@
+.wrapper {
+  background-color: orange;
+}
+
+h3 {
+  background-color: lightyellow;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: dashed 1px black;
+}
