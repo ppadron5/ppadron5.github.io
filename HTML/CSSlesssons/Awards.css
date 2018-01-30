@@ -1,0 +1,26 @@
+table, th, td, tr {
+  border: solid 1px black;
+}
+
+.header h2 {
+  display: inline-block;
+}
+
+.header {
+  text-align: center;
+}
+.outerwrapper {
+  width: 70%;
+  margin: auto;
+}
+
+.rounddiv {
+  width: 35px;
+  height: 35px;
+  border-radius: 22px;
+  border: solid 1px black;
+}
+
+.red {
+    background-color: red;
+}
