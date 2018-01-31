@@ -1,5 +1,12 @@
-table, th, td, tr {
+/*table, th, td, tr {
   border: solid 1px black;
+}
+*/
+
+table {
+  margin: auto;
+  width: 75%;
+  border-collapse: collapse;
 }
 
 .header h2 {
@@ -19,8 +26,63 @@ table, th, td, tr {
   height: 35px;
   border-radius: 22px;
   border: solid 1px black;
+  margin: auto;
 }
 
-.red {
-    background-color: red;
+.centered {
+  text-align: center;
+}
+.gold {
+    background-color: #ffd700;
+}
+
+.silver {
+    background-color: #c0c0c0;
+}
+
+.bronze {
+  background-color: rgba(205, 127, 50, .5);
+}
+
+.rhodium {
+  background-color: #d2d2d2;
+}
+
+.innertittle {
+  font-weight: bolder;
+}
+
+.secondline {
+  font-weight: lighter;
+  font-size: .8em;
+}
+
+.even {
+  background-color: #e3e8ef;
+}
+
+.headerrow {
+  background-color: #e3e8ef;
+}
+
+.footer {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.backbutton {
+  background-color: white;
+  color: blue;
+  border: solid 2px blue;
+  border-radius: 30px;
+  width: 105px;
+  font-size: 1.25em;
+}
+
+tr:hover {
+  background-color: #737373;
+}
+
+th:hover {
+  background-color: none;
 }
