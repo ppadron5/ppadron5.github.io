@@ -3,41 +3,46 @@
   <head>
     <title>School Information Page</title>
     <link href="SchoolInfoPage.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="header">
       <nav>
-        <img src="#" alt="logo">
-        <label>School Information Page</label>
+        <div class="logo">
+          <p>School Comparison Page</p>
+        </div>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="https://www.google.com">About Me</a></li>
-          <li><a href="#">Google</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Blog</a></li>
           <li><a href="#">My Sites</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="banner">
-      <img src="library-869061_1920.jpg" alt="banner">
+
     </div>
-
     <div class="cardWrapper">
-      <div class="School1">
-        <select>
-          <option checked>University of Texas</option>
-          <option>Texas Tech University</option>
-          <option>Baylor University</option>
-        </select>
+      <div class="card One">
+        <div class="schoolSelect">
+          <select>
+            <option checked>University of Texas</option>
+            <option>Texas Tech University</option>
+            <option>Baylor University</option>
+          </select>
+        </div>
 
-        <div id="cardOne">
-          <label>School name</label>
-          <p><img src="#" alt="SchoolImage">School image</p>
+        <div id="schoolOne">
+          <label>University of Texas</label>
+          <p><img src="https://tuition.utexas.edu/sites/all/themes/tuition/logo.png" alt="SchoolImage"></p>
           <label>4 Year costs</label>
             <div class="table">
-              <table border="1">
+              <table>
 
                 <tr>
                   <th>Year</th>
@@ -87,18 +92,21 @@
         </div>
       </div>
 
-        <div class="School2">
+      <div class="card Two">
+        <div class="schoolSelect">
           <select>
             <option checked>University of Texas</option>
             <option>Texas Tech University</option>
             <option>Baylor University</option>
           </select>
-        <div id="cardTwo">
-          <label>School name</label>
-          <p><img src="#" alt="SchoolImage">School image</p>
+        </div>
+
+        <div id="schoolTwo">
+          <label>Carnegie Mellon University</label>
+          <p><img src="http://www-hep.phys.cmu.edu/logos/CMU_stacked.png" alt="SchoolImage"></p>
           <label>4 Year costs</label>
             <div class="table">
-              <table border="1">
+              <table>
 
                 <tr>
                   <th>Year</th>
@@ -146,7 +154,6 @@
             </ol>
           </label>
         </div>
-
       </div>
     </div>
 
@@ -166,22 +173,24 @@
           <textarea>
           </textarea>
           <br>
-          <input type="submit" value="Send Comment">
+          <div class="button">
+            <input type="submit" value="Send Comment">
+          </div>
         </fieldset>
       </form>
     </div>
     <br>
     <div class="social">
       <a href="#">
-        <img src="#" alt="twitter">
+        <a href="#" class="fa fa-facebook"></a>
       </a>
 
       <a href="#">
-        <img src="#" alt="instagram">
+        <a href="#" class="fa fa-twitter"></a>
       </a>
 
       <a href="#">
-        <img src="#" alt="facebook">
+        <a href="#" class="fa fa-instagram"></a>
       </a>
     </div>
 
