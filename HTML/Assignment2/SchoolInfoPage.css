@@ -1,0 +1,23 @@
+
+
+.header {
+  height: 100px;
+  background-color: #dbdbdb;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+}
+
+.banner {
+  height: 500px;
+  width: 100%;
+  position: fixed;
+  top: 100px;
+  color: #707070;
+  background-image: url("https://cdn.pixabay.com/photo/2015/07/31/11/45/library-869061_1280.jpg");
+}
+
+.cardwrapper {
+  position: relative;
+  top: 400px;
+}
