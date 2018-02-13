@@ -18,7 +18,14 @@
       <label>The answer is ...</label>
     </div>
 
-    <button onclick='add()'>Add them up</button>
+    <select>
+      <option value="add">Calculate Sum</option>
+      <option value="median">Calculate Median</option>
+      <option value="average">Calculate Average</option>
+    </select>
+
+
+    <button  id='addButton' onclick='add()'>Add them up</button>
 
     <div>
       The answer is <span id="answer">...</span>

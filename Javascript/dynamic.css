@@ -21,3 +21,26 @@ button {
   font-size: 1.1em;
   color: red;
 }
+
+.numeric {
+  width: 100px;
+  margin: 10px 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.invalid {
+  border: solid 3px red;
+  background-color: #f5f5dc;
+}
+#textBoxes {
+  width: 500px;
+  margin: auto;
+}
+
+select {
+  background-color: #337ab7;
+  color: white;
+  font-size: 1.1em;
+  padding: 5px 15px;
+}
