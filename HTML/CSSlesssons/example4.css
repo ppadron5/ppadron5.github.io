@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: orange;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.centered {
+  text-align: center;
+}
+.lowerdiv {
+  background-color: lightyellow;
+  width: 80%;
+  margin: auto;
+  border: dashed 3px black;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 1.25em;
+}
+
+.fulljust {
+  padding: 0px 20px;
+  text-align: justify;
+}
+
+ul {
+  list-style: none;
+}

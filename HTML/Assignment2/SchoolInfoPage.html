@@ -2,57 +2,84 @@
 <html>
   <head>
     <title>School Information Page</title>
+    <link href="SchoolInfoPage.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
   </head>
 
   <body>
+
     <div class="header">
-      <img src="#" alt="logo">
-      <label>School Information Page</label>
-      <ul>
-        <li>Home</li>
-        <li><a href="https://www.google.com">Link</a></li>
-        <li>Link2</li>
-      </ul>
+      <nav>
+        <div class="logo">
+          <p>School Comparison Page</p>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">My Sites</a></li>
+        </ul>
+      </nav>
     </div>
 
     <div class="banner">
-      <img src="#" alt="banner">
+
     </div>
-
-    <div class="Content">
-      <div class="School 1">
-        <select>
-          <option checked>University of Texas</option>
-          <option>Texas Tech University</option>
-          <option>Baylor University</option>
-        </select>
-
-        <div id="cardOne">
-          <label>School name</label>
-          <p><img src="#" alt="SchoolImage">School image</p>
-          <p>4 Year costs</p>
-          <label>Top Five Majors
-            <ol>
-              <li>Major 1</li>
-              <li>Major 2</li>
-              <li>Major 3</li>
-              <li>Major 4</li>
-              <li>Major 5</li>
-            </ol>
-          </label>
-        </div>
-      </div>
-
-        <div class="School 2">
+    <div class="cardWrapper">
+      <div class="card One">
+        <div class="schoolSelect">
           <select>
             <option checked>University of Texas</option>
             <option>Texas Tech University</option>
             <option>Baylor University</option>
           </select>
-        <div id="cardTwo">
-          <label>School name</label>
-          <p><img src="#" alt="SchoolImage">School image</p>
-          <p>4 Year costs</p>
+        </div>
+
+        <div id="schoolOne">
+          <label>University of Texas</label>
+          <p><img src="https://tuition.utexas.edu/sites/all/themes/tuition/logo.png" alt="SchoolImage"></p>
+          <label>4 Year costs</label>
+            <div class="table">
+              <table>
+
+                <tr>
+                  <th>Year</th>
+                  <th>Tuition</th>
+                  <th>Room/Board</th>
+                  <th>Total Cost</th>
+                </tr>
+
+                <tr>
+                  <td>2017</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+
+                <tr>
+                  <td>2016</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+
+                <tr>
+                  <td>2015</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+
+                <tr>
+                  <td>2014</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+              </table>
+            </div>
           <label>Top Five Majors
             <ol>
               <li>Major 1</li>
@@ -63,8 +90,108 @@
             </ol>
           </label>
         </div>
-
       </div>
+
+      <div class="card Two">
+        <div class="schoolSelect">
+          <select>
+            <option checked>University of Texas</option>
+            <option>Texas Tech University</option>
+            <option>Baylor University</option>
+          </select>
+        </div>
+
+        <div id="schoolTwo">
+          <label>Carnegie Mellon University</label>
+          <p><img src="http://www-hep.phys.cmu.edu/logos/CMU_stacked.png" alt="SchoolImage"></p>
+          <label>4 Year costs</label>
+            <div class="table">
+              <table>
+
+                <tr>
+                  <th>Year</th>
+                  <th>Tuition</th>
+                  <th>Room/Board</th>
+                  <th>Total Cost</th>
+                </tr>
+
+                <tr>
+                  <td>2017</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+
+                <tr>
+                  <td>2016</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+
+                <tr>
+                  <td>2015</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+
+                <tr>
+                  <td>2014</td>
+                  <td>$2000</td>
+                  <td>$1000</td>
+                  <td>$3000</td>
+                </tr>
+              </table>
+            </div>
+          <label>Top Five Majors
+            <ol>
+              <li>Major 1</li>
+              <li>Major 2</li>
+              <li>Major 3</li>
+              <li>Major 4</li>
+              <li>Major 5</li>
+            </ol>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="Feedback">
+      <form>
+        <fieldset>
+          <legend>
+            Send Us Feedback
+          </legend>
+          Name: <br>
+          <input type="text">
+          <br>
+          Email: <br>
+          <input type="text">
+          <br>
+          Comment: <br>
+          <textarea>
+          </textarea>
+          <br>
+          <div class="button">
+            <input type="submit" value="Send Comment">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <br>
+    <div class="social">
+      <a href="#">
+        <a href="#" class="fa fa-facebook"></a>
+      </a>
+
+      <a href="#">
+        <a href="#" class="fa fa-twitter"></a>
+      </a>
+
+      <a href="#">
+        <a href="#" class="fa fa-instagram"></a>
+      </a>
     </div>
 
   </body>
