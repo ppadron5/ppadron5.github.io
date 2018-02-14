@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="dynamic.css">
 </head>
 
-<body>
+<body onload="setup()">
   <div class="wrapper">
     <button onclick='createBox()'>Create Text Box</button>
 
@@ -18,14 +18,14 @@
       <label>The answer is ...</label>
     </div>
 
-    <select>
-      <option value="add">Calculate Sum</option>
+    <select id="actionChoice" onchange="chooseAction()">
+      <option value="add" selected>Calculate Sum</option>
       <option value="median">Calculate Median</option>
       <option value="average">Calculate Average</option>
     </select>
 
 
-    <button  id='addButton' onclick='add()'>Add them up</button>
+    <button  id='addButton'>Text</button>
 
     <div>
       The answer is <span id="answer">...</span>

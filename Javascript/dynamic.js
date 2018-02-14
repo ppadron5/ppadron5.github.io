@@ -7,6 +7,15 @@ function add() {
   document.getElementById('answer').innerHTML = sum;
 }
 
+function average() {
+  boxes = Array.from(document.getElementByClassName('numeric'));
+  sum = 0;
+  boxes.forEach(function(elem) {
+    sum += parseInt(elem.value);
+  });
+  avg = sum
+}
+
 function createBox() {
   textBox = document.createElement('input');
   textBox.setAttribute('class', 'numeric');
@@ -32,4 +41,31 @@ function setButtonState() {
   } else {
   document.getElementById('addButton').disabled = false;
   }
+}
+
+function chooseAction() {
+  choice = document.getElementById('actionChoice');
+  action = choice[choice.selectedIndex];
+  if (action.value == 'add') {
+    button = document.getElementById('addButton');
+    button.innerHTML = "Add Up Contents";
+    button.setAttribute('onclick', 'add()');
+  }
+  if (action.value == 'average') {
+    button.innerHTML = "Average Contents";
+    button.setAttribute('onclick', 'average()');
+
+    //set button textBoxes
+    // set button handler
+  }
+  if (action.value == 'median') {
+    button.innerHTML = "Get Median";
+    button.setAttribute('onclick', 'median()')
+    //set button textBoxes
+    // set button handler
+  }
+}
+
+function setup(){
+  chooseAction();
 }
