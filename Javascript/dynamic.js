@@ -1,3 +1,7 @@
+function getRand(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
 function add() {
   boxes = Array.from(document.getElementsByClassName('numeric'));
   sum = 0;
@@ -16,10 +20,23 @@ function average() {
   avg = sum
 }
 
+function median() {
+  boxes = Array.from(document.getElementByClassName('numeric'));
+  anArray = [];
+  boxes.forEach(function(elem) {
+    anArray.push(parseInt(elem.value));
+  });
+  anArray.sort(function (a, b) {
+    return a-b;
+  });
+  med = anArray[Math.floor(anArray.length / 2)];
+  document.getElementById('answer').innerHTML = med;
+}
+
 function createBox() {
   textBox = document.createElement('input');
   textBox.setAttribute('class', 'numeric');
-  textBox.setAttribute('value', 1);
+  textBox.setAttribute('value', getRand(1000));
   textBox.setAttribute('onkeyup', 'validateTextbox(this)');
   document.getElementById('textBoxes').appendChild(textBox);
 }
