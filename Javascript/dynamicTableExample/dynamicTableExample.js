@@ -17,6 +17,9 @@ function makeCourseRows(student) {
     row.appendChild(createTD(course.courseName));
     row.appendChild(createTD(course.instructor));
     row.appendChild(createTD(course.termGrades[0]));
+    row.appendChild(createTD(course.termGrades[1]));
+    row.appendChild(createTD(course.termGrades[2]));
+    row.appendChild(createTD(course.termGrades[3]));
     document.getElementById('courseRows').appendChild(row);
   });
 }
@@ -25,6 +28,14 @@ function createTD(content) {
   cell = document.createElement('td');
   cell.innerHTML = content;
   return cell;
+}
+
+function getStudent() {
+   choice = document.getElementById('selectChoice')
+   action = choice[choice.selectedIndex];
+   if (action.value == students[0].idNumber);
+   makeCourseRows(students[0]);
+   choice = clear;
 }
 
 
