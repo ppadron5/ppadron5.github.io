@@ -12,6 +12,13 @@ function buildOptions() {
 }
 
 function makeCourseRows(student) {
+  document.getElementById("courseRows").innerHTML = "";
+  document.getElementById("studentName").innerHTML = "Student Name";
+  document.getElementById("streetName").innerHTML = "Street Name";
+  document.getElementById("cityStateZip").innerHTML = "City, State, Zip Code";
+  document.getElementById("studentId").innerHTML = "Student ID";
+  document.getElementById("studentImage").src="https://i.imgur.com/IGY0n6f.png";
+  student.courses.forEach(function(course) {
   student.courses.forEach(function (course) {
     row = document.createElement('tr');
     row.appendChild(createTD(course.courseName));
