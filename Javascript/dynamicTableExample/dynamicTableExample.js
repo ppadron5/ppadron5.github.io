@@ -1,4 +1,4 @@
-function setup() {
+/*function setup() {
   buildOptions();
 }
 
@@ -44,10 +44,57 @@ function getStudent() {
    makeCourseRows(students[0]);
    choice = clear;
 }
+*/
 
+function chooseStudent() {
+  students.forEach(function(student) {
+    option = document.createElement("option");
+    option.value = student.idNumber;
+    option.innerHTML = student.lastName + ", " + student.firstName;
+    document.getElementById("dropdown").appendChild(option);
+  });
+}
 
+function idCheck() {
+  choice = document.getElementById("dropdown");
+  action = choice[choice.selectedIndex];
+  makeCourseRows(students[action.index-1]);
+}
 
+function makeCourseRows(student) {
+  document.getElementById("courseRows").innerHTML = "";
+  document.getElementById("studentName").innerHTML = "Student Name";
+  document.getElementById("streetName").innerHTML = "Street Name";
+  document.getElementById("cityStateZip").innerHTML = "City, State, Zip Code";
+  document.getElementById("studentId").innerHTML = "Student ID";
+  document.getElementById("studentImage").src="https://i.imgur.com/IGY0n6f.png";
+  student.courses.forEach(function(course) {
+    row = document.createElement("tr");
+    accum = 0;
+    document.getElementById("studentImage").src=student.avatar;
+    row.appendChild(createTD(course.courseName));
+		document.getElementById("studentName").innerHTML = student.lastName + " " + student.firstName;
+    document.getElementById("streetName").innerHTML = student.streetAddress;
+		document.getElementById("cityStateZip").innerHTML = student.city + "," + student.state + "," + student.zipCode;
+		document.getElementById("studentId").innerHTML = student.idNumber;
+    row.appendChild(createTD(course.instructor));
+    row.appendChild(createTD(course.termGrades[0]));
+    row.appendChild(createTD(course.termGrades[1]));
+    row.appendChild(createTD(course.termGrades[2]));
+    row.appendChild(createTD(course.termGrades[3]));
+    for (i = 0; i < course.termGrades.length; i++) {
+      accum += course.termGrades[i];
+    }
+    row.appendChild(createTD(Math.ceil(accum / course.termGrades.length)));
+    document.getElementById("courseRows").appendChild(row);
+  });
+}
 
+function createTD(content) {
+  cell = document.createElement("td");
+  cell.innerHTML = content;
+  return cell;
+}
 
 
 

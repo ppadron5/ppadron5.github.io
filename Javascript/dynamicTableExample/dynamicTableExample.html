@@ -1,4 +1,4 @@
-<!Doctype html>
+<!-- <!Doctype html>
 <html>
 
 <head>
@@ -45,5 +45,61 @@
     </div>
 
 </body>
+
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Grade Engine</title>
+    <link rel="stylesheet" type="text/css" href="gradeEngine.css">
+    <script src="gradeEngine.js"></script>
+  </head>
+
+  <body onload="chooseStudent()">
+    <select id="dropdown" onchange="idCheck()">
+      <option value="0" selected>Please select a student...</option>
+    </select>
+
+    <br>
+
+    <div id="reportCard">
+      <div class="topSection">
+        <div class="personalInfoDiv halfSized">
+          <h1 id="studentName" class="lowSpacing">
+            Student Name
+          </h1>
+          <h3 id="streetName" class="lowSpacing">
+            Street Name
+          </h3>
+          <h3 id="cityStateZip" class="lowSpacing">
+            City, State, Zip Code
+          </h3>
+        </div>
+
+        <div class="avatarImage halfSized">
+          <img id="studentImage" src="https://i.imgur.com/IGY0n6f.png">
+        </div>
+      </div>
+      <table>
+        <tr>
+          <th>Course</th>
+          <th>Instructor</th>
+          <th>Term 1</th>
+          <th>Term 2</th>
+          <th>Term 3</th>
+          <th>Term 4</th>
+          <th>Average</th>
+        </tr>
+        <tbody id="courseRows">
+        </tbody>
+      </table>
+      <h3 id="studentId" class="lowSpacing">
+        Student ID
+      </h3>
+    </div>
+  </body>
 
 </html>
