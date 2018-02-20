@@ -1,0 +1,24 @@
+body {
+  text-align: center;
+}
+
+#playerInfo {
+  display: inline-block;
+  width: 300px;
+}
+#playerAvatar {
+  width: 100px;
+}
+#dicePanel {
+  display: inline-block;
+  width: 300px;
+}
+
+#dicePanel img {
+  width: 50px;
+}
+
+.saved {
+  border: solid 3px green;
+  border-radius: 10px;
+}
