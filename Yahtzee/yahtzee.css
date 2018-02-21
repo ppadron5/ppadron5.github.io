@@ -22,3 +22,26 @@ body {
   border: solid 3px green;
   border-radius: 10px;
 }
+ table {
+   border-collapse: collapse;
+ }
+table tr td {
+  border: solid 1px white;
+  background-color: #258ac4;
+  color: white;
+}
+
+#scoreCard {
+  margin: auto;
+  width: 500px;
+
+}
+
+#roll {
+  background-color: #258ac4;
+  padding: 7px;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.05em;
+
+}

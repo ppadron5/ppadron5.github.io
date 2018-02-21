@@ -3,31 +3,31 @@ yahtzee = {
   'throwsRemainingInTurn' : 3,
   'player' : {
     'name' : 'Bill',
-    'avatar' : 'https://',
-  }
+    'avatar' : 'avatar.jpeg',
+  },
   'dice' : [
     {
-      'sideUp' : 4,
+      'sideUp' : 1,
+      'saved' : false,
+    },
+    {
+      'sideUp' : 1,
+      'saved' : false,
+    },
+    {
+      'sideUp' : 1,
+      'saved' : false,
+    },
+    {
+      'sideUp' : 1,
       'saved' : false,
     },
     {
       'sideUp' : 1,
       'saved' : true,
-    },
-    {
-      'sideUp' : 6,
-      'saved' : false,
-    },
-    {
-      'sideUp' : 2,
-      'saved' : true,
-    },
-    {
-      'sideUp' : 5,
-      'saved' : false,
     }
-  ]
-  'scoreCard' = [
+  ],
+  'scoreCard' : [
     {
       'title' : 'Full House',
       'top' : false,
@@ -36,7 +36,7 @@ yahtzee = {
       'score' : 25,
       'scoreCondition' : 'notSureYet',
       'scoreMath' : 'fixedScoreOf25'
-    }
+    },
     {
       'title' : 'Ones',
       'top' : true,
