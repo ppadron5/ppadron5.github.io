@@ -29,22 +29,76 @@ yahtzee = {
   ],
   'scoreCard' : [
     {
-      'title' : 'Full House',
-      'top' : false,
-      'displaySequence' : 9,
-      'scoreRecorded' : true,
-      'score' : 25,
-      'scoreCondition' : 'notSureYet',
-      'scoreMath' : 'fixedScoreOf25'
-    },
-    {
       'title' : 'Ones',
       'top' : true,
       'displaySequence' : 1,
       'scoreRecorded' : false,
-      'score' : 1,
+      'score' : 0,
       'scoreCondition' : 'notSureYet',
       'scoreMath' : 'sumOfOnes'
+    },
+    {
+      'title' : 'Twos',
+      'top' : true,
+      'displaySequence' : 2,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'sumOfTwos'
+    },
+    {
+      'title' : 'Threes',
+      'top' : true,
+      'displaySequence' : 3,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'sumOfThrees'
+    },
+    {
+      'title' : 'Fours',
+      'top' : true,
+      'displaySequence' : 4,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'sumOfFours'
+    },
+    {
+      'title' : 'Twos',
+      'top' : false,
+      'displaySequence' : 2,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'sumOfTwos'
+    },
+    {
+      'title' : 'Twos',
+      'top' : false,
+      'displaySequence' : 2,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'sumOfTwos'
+    },
+    {
+      'title' : 'Twos',
+      'top' : false,
+      'displaySequence' : 2,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'sumOfTwos'
+    },
+    {
+      'title' : 'Twos',
+      'top' : false,
+      'displaySequence' : 2,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'sumOfTwos'
     }
   ]
  }
