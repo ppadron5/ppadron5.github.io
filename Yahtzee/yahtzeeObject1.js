@@ -65,40 +65,76 @@ yahtzee = {
       'scoreMath' : 'sumOfFours'
     },
     {
-      'title' : 'Twos',
-      'top' : false,
-      'displaySequence' : 2,
+      'title' : 'Fives',
+      'top' : true,
+      'displaySequence' : 5,
       'scoreRecorded' : false,
       'score' : 0,
       'scoreCondition' : 'notSureYet',
-      'scoreMath' : 'sumOfTwos'
+      'scoreMath' : 'sumOfFives'
     },
     {
-      'title' : 'Twos',
-      'top' : false,
-      'displaySequence' : 2,
+      'title' : 'Sixes',
+      'top' : true,
+      'displaySequence' : 6,
       'scoreRecorded' : false,
       'score' : 0,
       'scoreCondition' : 'notSureYet',
-      'scoreMath' : 'sumOfTwos'
+      'scoreMath' : 'sumOfSixes'
     },
     {
-      'title' : 'Twos',
+      'title' : '3 of a Kind',
       'top' : false,
-      'displaySequence' : 2,
+      'displaySequence' : 7,
       'scoreRecorded' : false,
       'score' : 0,
       'scoreCondition' : 'notSureYet',
-      'scoreMath' : 'sumOfTwos'
+      'scoreMath' : 'totalOfAllDice'
     },
     {
-      'title' : 'Twos',
+      'title' : '4 of a Kind',
       'top' : false,
-      'displaySequence' : 2,
+      'displaySequence' : 8,
       'scoreRecorded' : false,
       'score' : 0,
       'scoreCondition' : 'notSureYet',
-      'scoreMath' : 'sumOfTwos'
-    }
+      'scoreMath' : 'sumOfAllDice'
+    },
+    {
+      'title' : 'Full House',
+      'top' : false,
+      'displaySequence' : 9,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'scoreOf25'
+    },
+    {
+      'title' : 'Sm. Straight',
+      'top' : false,
+      'displaySequence' : 10,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'scoreOf30'
+    },
+    {
+      'title' : 'Lg. Straight',
+      'top' : false,
+      'displaySequence' : 11,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'scoreOf40'
+    },
+    {
+      'title' : 'Yahtzee',
+      'top' : false,
+      'displaySequence' : 12,
+      'scoreRecorded' : false,
+      'score' : 0,
+      'scoreCondition' : 'notSureYet',
+      'scoreMath' : 'scoreOf50'
+    },
   ]
  }
