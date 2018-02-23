@@ -4,38 +4,49 @@
 <head>
   <title>Insert Title</title>
   <link rel="stylesheet" type="text/css" href="yahtzee.css">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <script src="yahtzeeObject1.js"></script>
   <script src="yahtzee.js"></script>
 </head>
 
 <body onload="setup()">
   <div id="title">
-    <h3>Play Yahtzee!</h3>
+    <h1>Play Yahtzee!</h1>
   </div>
-  <div id="playerInfo">
-    <img id="playerAvatar" src="qMark.jpg">
-    <br>
-    <label id="playerName">This is my Name</label>
 
-  </div>
-  <div id="dicePanel">
-    <img id="die0" src="1.png" class="saved">
-    <img id="die1" src="2.png">
-    <img id="die2" src="3.png" class="saved">
-    <img id="die3" src="4.png">
-    <img id="die4" src="5.png">
-    <br>
-    <button id="roll">Roll The Dice</button>
-  </div>
-  <div id="scoreCard">
-    <table>
-      <tr>
-        <th></th>
-        <th>Score</th>
-      </tr>
-      <tbody id="scoreRows">
 
-    </tbody>
+
+  <div class="avatarCard">
+    <div id="playerInfo">
+      <img id="playerAvatar" src="qMark.jpg">
+      <br>
+      <label id="playerName">This is my Name</label>
+    </div>
+
+        <div id="scoreCard">
+        <table>
+          <tr>
+            <th></th>
+            <th>Score</th>
+          </tr>
+          <tbody id="scoreRows">
+          </tbody>
+        </table>
+        </div>
+  </div>
+
+  <div id="idk">
+    <div id="dicePanel">
+      <img id="die0" src="1.png" class="saved">
+      <img id="die1" src="2.png">
+      <img id="die2" src="3.png" class="saved">
+      <img id="die3" src="4.png">
+      <img id="die4" src="5.png">
+      <br>
+      <div id="button">
+        <button id="roll">Roll The Dice</button>
+      </div>
+    </div>
   </div>
 </body>
 

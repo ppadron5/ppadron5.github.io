@@ -135,6 +135,6 @@ yahtzee = {
       'score' : 0,
       'scoreCondition' : 'notSureYet',
       'scoreMath' : 'scoreOf50'
-    },
+    }
   ]
  }
