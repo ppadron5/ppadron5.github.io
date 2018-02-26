@@ -38,16 +38,16 @@
 
 
     <div id="dicePanel">
-      <img id="die0" src="1.png" class="saved">
-      <img id="die1" src="2.png">
-      <img id="die2" src="3.png" class="saved">
-      <img id="die3" src="4.png">
-      <img id="die4" src="5.png">
+      <label>Throws Remaining: <span id="throwsRemainLabel"></span></label>
+      <img id="die0" onclick="saveDie(0)">
+      <img id="die1" onclick="saveDie(1)">
+      <img id="die2" onclick="saveDie(2)">
+      <img id="die3" onclick="saveDie(3)">
+      <img id="die4" onclick="saveDie(4)">
       <br>
       <div id="button">
-        <button id="roll">Roll The Dice</button>
+        <button id="roll" onclick="rollDice()">Roll The Dice (<span id="throwsRemain"></span>)</button>
       </div>
-    </div>
 
 </body>
 
