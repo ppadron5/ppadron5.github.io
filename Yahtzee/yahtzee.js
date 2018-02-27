@@ -29,32 +29,46 @@ function loadDice() {
 }
 
 function loadScorecard() {
-  // make TR and TD and insert into scoreRows
-  yahtzee.scoreCard.forEach(function(scoreCardRow) {
+  yahtzee.scoreCard.forEach(function(scoreCardRow, index) {
   if(scoreCardRow.top) {
-      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score);
+      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score, (scoreCardRow.scoreRecorded ? "scored" : "unscored"), !scoreCardRow.scoreRecorded, index);
     }
   });
-  buildScoreCardRow("Top Subtotal", " ");
-  buildScoreCardRow("Top Bonus", " ");
-  yahtzee.scoreCard.forEach(function(scoreCardRow) {
+  buildScoreCardRow("Top Subtotal", " ", "totals", false, 0);
+  buildScoreCardRow("Top Bonus", " ", "totals", false, 0);
+  yahtzee.scoreCard.forEach(function(scoreCardRow, index) {
     if (!scoreCardRow.top) {
-      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score);
+      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score, (scoreCardRow.scoreRecorded ? "scored" : "unscored"), !scoreCardRow.scoreRecorded, index);
+      /*if (scoreCardRow.scoreRecorded) {
+        className = "scored";
+      } else {
+        className = "unscored"
+      }
+      buildScoreCardRow(scoreCardRow.title, scoreCardRow.score);*/
     }
   });
-  buildScoreCardRow("Total Score:", " ");
-
+  buildScoreCardRow("Total Score:", " ", "totals");
 }
 
-function buildScoreCardRow(title, score) {
+function buildScoreCardRow(title, score, columnClassName, clickable, scoreCardIndex) {
   tr = document.createElement('tr');
   td1 = document.createElement('td');
   td1.innerHTML = title;
   tr.appendChild(td1);
   td2 = document.createElement('td');
   td2.innerHTML = score;
+  td2.className = columnClassName;
+  if (clickable) {
+    td2.onclick = saveScore;
+    td2.setAttribute('data-scoreCardIndex', scoreCardIndex);
+  }
   tr.appendChild(td2);
   document.getElementById('scoreRows').appendChild(tr);
+}
+
+function saveScore() {
+  index = this.getAttribute('data-scoreCardIndex');
+  alert(index);
 }
 
 function rollDice() {

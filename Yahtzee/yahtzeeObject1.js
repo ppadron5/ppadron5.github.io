@@ -41,7 +41,7 @@ yahtzee = {
       'title' : 'Twos',
       'top' : true,
       'displaySequence' : 2,
-      'scoreRecorded' : false,
+      'scoreRecorded' : true,
       'score' : 0,
       'scoreCondition' : 'notSureYet',
       'scoreMath' : 'sumOfTwos'
