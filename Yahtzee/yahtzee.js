@@ -82,10 +82,9 @@ function saveScore() {
 }
 
 function rollDice() {
-  //TODO: do not allow roll if all dice saved
   rerolled = false;
   if (yahtzee.throwsRemainingInTurn > 0) {
-  yahtzee.dice.forEach(function(die) {
+  yahtzee.dice.forEach(function (die) {
     if (!die.saved) {
       die.sideUp = Math.floor(Math.random() * 6) + 1;
       rerolled = true;
