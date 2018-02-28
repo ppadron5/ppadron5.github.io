@@ -29,6 +29,7 @@ function loadDice() {
 }
 
 function loadScorecard() {
+  document.getElementById('scoreRows').innerHTML = "";
   yahtzee.scoreCard.forEach(function(scoreCardRow, index) {
   if(scoreCardRow.top) {
       buildScoreCardRow(scoreCardRow.title, scoreCardRow.score, (scoreCardRow.scoreRecorded ? "scored" : "unscored"), !scoreCardRow.scoreRecorded, index);
@@ -67,8 +68,17 @@ function buildScoreCardRow(title, score, columnClassName, clickable, scoreCardIn
 }
 
 function saveScore() {
-  index = this.getAttribute('data-scoreCardIndex');
-  alert(index);
+  if (yahtzee.throwsRemainingInTurn < 3) {
+    index = this.getAttribute('data-scoreCardIndex');
+    yahtzee.scoreCard[index].scoreRecorded = true;
+    loadScorecard();
+    yahtzee.throwsRemainingInTurn = 3;
+    yahtzee.dice.forEach(function (die) {
+      die.sideUp = 0;
+      die.saved = false;
+    });
+    loadDice();
+  }
 }
 
 function rollDice() {

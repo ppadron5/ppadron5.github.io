@@ -81,6 +81,7 @@ background-size: 100px 100px;
   border: solid 3px green;
   border-radius: 10px;
 }
+
  table {
    display: inline-block;
    text-align: center;
@@ -90,6 +91,10 @@ table tr td {
   border: solid 1px white;
   background-color: #258ac4;
   color: white;
+}
+
+th {
+    color: white;
 }
 
 #scoreCard {
