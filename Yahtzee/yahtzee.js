@@ -5,6 +5,8 @@ function setup() {
   buildScoreCardRow();
   rollDice();
   saveDie();
+  calculateScores();
+  sumOfDice();
 }
 
 function loadPlayerInfo() {
@@ -92,7 +94,8 @@ function rollDice() {
   });
   if (rerolled)
       yahtzee.throwsRemainingInTurn--;
-    loadDice();
+      loadDice();
+      calculateScores();
   }
 }
 
@@ -101,4 +104,54 @@ function saveDie(dieIndex) {
   yahtzee.dice[dieIndex].saved = !yahtzee.dice[dieIndex].saved;
   loadDice();
   }
+}
+
+function calculateScores() {
+  yahtzee.scoreCard.forEach(function (scoreCardRow) {
+    if (!scoreCardRow.scoreRecorded) {
+      if (conditionIsMet(scoreCardRow.scoreCondition)) {
+        if (scoreCardRow.scoreMath[0] == 'const') {
+        scoreCardRow.score = scoreCardRow.scoreMath[1];
+      }
+        if (scoreCardRow.scoreMath[0] == 'sum') {
+          scoreCardRow.score = sumOfDice(scoreCardRow.scoreMath[1])
+        }
+      }
+      } else {
+        scoreCardRow.score = 0;
+    }
+  });
+  loadScorecard();
+}
+
+
+function sumOfDice(valueToMatch) {
+  total = 0;
+  yahtzee.dice.forEach(function (die) {
+    if (die.sideUp == valueToMatch || valueToMatch === 0) {
+      total += die.sideUp;
+    }
+  });
+  return total;
+}
+
+function conditionIsMet(condition) {
+  if (condition[0] == 'none') {
+    return true;
+  }
+  if (condition[0] == 'ofAKind') {
+    return  ofAKind(condition);
+  }
+  if (condition[0] == 'inARow') {
+    return inARow(condition);
+  }
+  return false;
+}
+
+function ofAKind(condition) {
+  return false;
+}
+
+function inARow(condition) {
+  return false;
 }
