@@ -1,0 +1,21 @@
+.modal-wrapper {
+  display: none;
+  background-color: rgba(0, 0, 0, .3);
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%
+
+}
+
+.modal-content {
+  margin: 15% auto;
+  width: 40%;
+  background-color: white;
+  padding: 20px 10px;
+}
+
+img {
+  width: 50px;
+}
