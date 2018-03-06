@@ -2,11 +2,6 @@ function setup() {
   loadPlayerInfo();
   loadDice();
   loadScorecard();
-  buildScoreCardRow();
-  rollDice();
-  saveDie();
-  calculateScores();
-  sumOfDice();
 }
 
 function loadPlayerInfo() {
@@ -111,15 +106,15 @@ function calculateScores() {
     if (!scoreCardRow.scoreRecorded) {
       if (conditionIsMet(scoreCardRow.scoreCondition)) {
         if (scoreCardRow.scoreMath[0] == 'const') {
-        scoreCardRow.score = scoreCardRow.scoreMath[1];
-      }
+          scoreCardRow.score = scoreCardRow.scoreMath[1];
+        }
         if (scoreCardRow.scoreMath[0] == 'sum') {
           scoreCardRow.score = sumOfDice(scoreCardRow.scoreMath[1])
         }
-      }
       } else {
         scoreCardRow.score = 0;
-    }
+      }
+    } 
   });
   loadScorecard();
 }
