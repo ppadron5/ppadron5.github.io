@@ -1,6 +1,6 @@
 function setup() {
   loadModal();
-  loadPlayerInfo();
+  //loadPlayerInfo();
   loadDice();
   loadScorecard();
 }
@@ -13,19 +13,20 @@ function loadModal() {
 function closeModal() {
   name = document.getElementById('nameInput').value;
   if (name.length > 0) {
-    document.getElementById('name').innerHTML = name;
+    yahtzee.player.name = name;
+    document.getElementById('playerName').innerHTML = yahtzee.player.name;
     CheckedImage = document.querySelector('input[name=avatar][checked]').value;
-    document.getElementsByClassName('avatar').src = CheckedImage;
+    //document.getElementsByClassName('avatar').src = CheckedImage;
     modal = document.getElementsByClassName('modal-wrapper')[0];
     modal.style.display = "none";
   }
 }
 
 
-function loadPlayerInfo() {
+/*function loadPlayerInfo() {
   document.getElementById('playerName').innerHTML = yahtzee.player.name;
   document.getElementById('playerAvatar').src = yahtzee.player.avatar;
-}
+}*/
 
 function loadDice() {
   dieImages = ['', '1.png', '2.png', '3.png', '4.png', '5.png', '6.png'];
