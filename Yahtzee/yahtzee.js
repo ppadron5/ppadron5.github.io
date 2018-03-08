@@ -16,7 +16,8 @@ function closeModal() {
     yahtzee.player.name = name;
     document.getElementById('playerName').innerHTML = yahtzee.player.name;
     CheckedImage = document.querySelector('input[name=avatar][checked]').value;
-    //document.getElementsByClassName('avatar').src = CheckedImage;
+    document.getElementsByClassName('avatar').src = CheckedImage.innerHTML = yahtzee.player.avatar;
+    //CheckedImage.innerHTMl = yahtzee.player.avatar;
     modal = document.getElementsByClassName('modal-wrapper')[0];
     modal.style.display = "none";
   }
