@@ -163,10 +163,40 @@ function conditionIsMet(condition) {
   return false;
 }
 
-function ofAKind(condition) {
+/*function ofAKind(condition) {
   return false;
 }
 
 function inARow(condition) {
+  return false;
+}*/
+
+function inARow(anArray, numberToMath) {
+
+}
+
+function fourinRow(anArray) {
+  for (i=1; i<=3; i++) {
+    found = true;
+    for (j=1; j<=1+3; j++) {
+      if (!anArray.includes(j))
+        found = false;
+    }
+    if (found)
+      return true;
+  }
+  return false;
+}
+
+function fiveinARow(anArray) {
+  for (i=1; i<=2; i++) {
+    found = true;
+    for (j=1; j<=1+4; j++) {
+      if (!anArray.includes(j))
+        found = false;
+    }
+    if (found)
+      return true;
+  }
   return false;
 }
